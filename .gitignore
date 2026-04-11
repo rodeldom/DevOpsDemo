@@ -12,6 +12,9 @@ target/
 !**/src/test/**/build/
 !**/build/reports/jacoco/ 
 
+!backend/build/reports/jacoco/
+
+
 ### STS ###
 .apt_generated
 .classpath
