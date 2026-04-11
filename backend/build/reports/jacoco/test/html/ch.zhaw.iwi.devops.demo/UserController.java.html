@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="de"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>UserController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">demo</a> &gt; <a href="index.source.html" class="el_package">ch.zhaw.iwi.devops.demo</a> &gt; <span class="el_source">UserController.java</span></div><h1>UserController.java</h1><pre class="source lang-java linenums">package ch.zhaw.iwi.devops.demo;
+
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.springframework.boot.context.event.ApplicationReadyEvent;
+import org.springframework.context.event.EventListener;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+@CrossOrigin
+@RestController
+<span class="fc" id="L22">public class UserController {</span>
+<span class="fc" id="L23">    private Map&lt;Integer, User&gt; users = new HashMap&lt;&gt;();</span>
+
+    @EventListener(ApplicationReadyEvent.class)
+    public void init() {
+<span class="fc" id="L27">        users.put(1, new User(1, &quot;Dominic&quot;, &quot;rodel@zhaw.ch&quot;));</span>
+<span class="fc" id="L28">        users.get(1).setIsAdmin(true); // Dominic ist Admin</span>
+<span class="fc" id="L29">        users.get(1).setPriority(&quot;high&quot;);</span>
+
+<span class="fc" id="L31">        users.put(2, new User(2, &quot;Paul&quot;, &quot;huber@zhaw.ch&quot;));</span>
+<span class="fc" id="L32">        users.get(2).setIsAdmin(false);</span>
+<span class="fc" id="L33">        users.get(2).setPriority(&quot;medium&quot;);</span>
+
+<span class="fc" id="L35">        System.out.println(&quot;User Data Init&quot;);</span>
+<span class="fc" id="L36">    }</span>
+
+    @GetMapping(&quot;/services/user&quot;)
+    public List&lt;PathListEntry&lt;Integer&gt;&gt; user() {
+<span class="nc" id="L40">        var result = new ArrayList&lt;PathListEntry&lt;Integer&gt;&gt;();</span>
+<span class="nc bnc" id="L41" title="All 2 branches missed.">        for (var user : users.values()) {</span>
+<span class="nc" id="L42">            var entry = new PathListEntry&lt;Integer&gt;();</span>
+<span class="nc" id="L43">            entry.setKey(user.getId(), &quot;userKey&quot;);</span>
+<span class="nc" id="L44">            entry.setName(user.getName());</span>
+<span class="nc" id="L45">            entry.getDetails().add(&quot;Email: &quot; + user.getEmail());</span>
+<span class="nc bnc" id="L46" title="All 2 branches missed.">            if (user.getIsAdmin()) {</span>
+<span class="nc" id="L47">                entry.getDetails().add(&quot;👑 Admin&quot;);</span>
+            }
+<span class="nc bnc" id="L49" title="All 2 branches missed.">            entry.getDetails().add(&quot;Priority: &quot; + (user.getPriority() != null ? user.getPriority() : &quot;medium&quot;));</span>
+<span class="nc" id="L50">            entry.setTooltip(user.getEmail());</span>
+<span class="nc" id="L51">            result.add(entry);</span>
+<span class="nc" id="L52">        }</span>
+<span class="nc" id="L53">        return result.stream().sorted(Comparator.comparing(PathListEntry::getName)).toList();</span>
+    }
+
+    @GetMapping(&quot;/services/user/{key}&quot;)
+    public User getUser(@PathVariable(&quot;key&quot;) Integer key) {
+<span class="nc" id="L58">        return users.get(key);</span>
+    }
+
+    @PostMapping(&quot;/services/user&quot;)
+    public void createUser(@RequestBody User user) {
+<span class="nc" id="L63">        var newId = users.keySet().stream().max(Comparator.naturalOrder()).orElse(0) + 1;</span>
+<span class="nc" id="L64">        user.setId(newId);</span>
+<span class="nc" id="L65">        users.put(newId, user);</span>
+<span class="nc" id="L66">    }</span>
+
+    @PutMapping(&quot;/services/user/{key}&quot;)
+    public void updateUser(@PathVariable(&quot;key&quot;) Integer key, @RequestBody User user) {
+<span class="nc" id="L70">        user.setId(key);</span>
+<span class="nc" id="L71">        users.put(key, user);</span>
+<span class="nc" id="L72">    }</span>
+
+    @DeleteMapping(&quot;/services/user/{key}&quot;)
+    public User deleteUser(@PathVariable(&quot;key&quot;) Integer key) {
+<span class="nc" id="L76">        return users.remove(key);</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.13.202504020838</span></div></body></html>

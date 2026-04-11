@@ -10,9 +10,7 @@ target/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
 !**/src/test/**/build/
-!**/build/reports/jacoco/ 
-
-!backend/build/reports/jacoco/
+!DevOpsDemo/backend/build/reports/jacoco/
 
 
 ### STS ###
