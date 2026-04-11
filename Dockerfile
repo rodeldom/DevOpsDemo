@@ -1,5 +1,5 @@
-# docker build -t mosazhaw/devopsdemo .
-# docker run -p 9001:8080 --name dockerize-devopsdemo -d mosazhaw/devopsdemo
+# docker build -t rodeldom/devopsdemo .
+# docker run -p 9001:8080 --name dockerize-devopsdemo -d rodeldom/devopsdemo
 
 FROM eclipse-temurin:25.0.1_8-jdk-noble
 RUN apt-get update && apt-get install -y curl \
