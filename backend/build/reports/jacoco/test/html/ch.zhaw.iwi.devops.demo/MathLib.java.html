@@ -7,22 +7,22 @@
     }
     
     public static int add(int a, int b) {
-<span class="nc" id="L10">        return a + b;</span>
+<span class="fc" id="L10">        return a + b;</span>
     }
 
     public static int subtract(int a, int b) {
-<span class="nc" id="L14">        return a - b;</span>
+<span class="fc" id="L14">        return a - b;</span>
     }
 
     public static int multiply(int a, int b) {
-<span class="nc" id="L18">        return a * b;</span>
+<span class="fc" id="L18">        return a * b;</span>
     }
 
     public static int divide(int a, int b) {
-<span class="nc bnc" id="L22" title="All 2 branches missed.">        if (b == 0) {</span>
-<span class="nc" id="L23">            throw new IllegalArgumentException(&quot;Division by zero is not allowed.&quot;);</span>
+<span class="fc bfc" id="L22" title="All 2 branches covered.">        if (b == 0) {</span>
+<span class="fc" id="L23">            throw new IllegalArgumentException(&quot;Division by zero is not allowed.&quot;);</span>
         }
-<span class="nc" id="L25">        return a / b;</span>
+<span class="fc" id="L25">        return a / b;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.13.202504020838</span></div></body></html>

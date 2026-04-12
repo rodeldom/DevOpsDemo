@@ -5,98 +5,68 @@
   "url": "http://localhost:3000",
   "tests": [
     {
-      "id": "8ee98c89-830f-4bba-9f7d-ecdf703b8ce5",
+      "id": "b31ad8c0-30b7-4365-8b16-81b19a4ae32b",
       "name": "Test",
       "commands": [
         {
-          "id": "a49037c3-0929-4f66-b951-d009cf82aeaf",
-          "comment": "",
+          "id": "ab4764a6-d584-41aa-8d8b-51788d79de02",
           "command": "open",
           "target": "/",
-          "targets": [],
           "value": ""
         },
         {
-          "id": "1461e2b5-6f97-416f-b7f0-587c7124cdea",
-          "comment": "",
-          "command": "setWindowSize",
-          "target": "992x857",
-          "targets": [],
-          "value": ""
-        },
-        {
-          "comment": "",
           "command": "waitForElementVisible",
-          "target": "css=.card-body",
-          "targets": [],
+          "target": "css=.tile-turquoise",
           "value": "10000",
-          "id": "27b34c55-df60-4903-8fbe-983b8982e4b9"
+          "id": "wait-main-tile-1"
         },
         {
-          "id": "6f57e860-f4c3-4100-a474-f42397e16b01",
-          "comment": "",
           "command": "click",
-          "target": "css=.card-body",
+          "target": "css=.tile-turquoise",
+          "value": "",
+          "id": "4ec6b246-68dc-402a-a8a3-fd6d4d75d617",
           "targets": [
             [
-              "css=.card-body",
+              "css=.tile-turquoise",
               "css:finder"
-            ],
-            [
-              "xpath=//path-framework[@id='app']/path-application/div/div/div/div[2]/div/span/span/span/path-button-group/span/div/span/span/path-button/a/div",
-              "xpath:idRelative"
-            ],
-            [
-              "xpath=//a/div",
-              "xpath:position"
-            ]
-          ],
-          "value": ""
-        },
-        {
-          "comment": "",
-          "command": "waitForElementVisible",
-          "target": "css=.tile-green",
-          "targets": [],
-          "value": "10000",
-          "id": "057f9aad-44e9-49c5-8eec-c2ec920a1e77",
-          "fallbackTargets": [
-            [
-              "css=.fa:nth-child(3)",
-              "css:finder"
-            ],
-            [
-              "xpath=(//path-framework[@id='app']/path-application/div/div/div/div/div/span[2]/span/span/path-button-group/span/div/span/span/path-button/a/div/i)[1]",
-              "xpath:idRelative"
             ]
           ]
         },
         {
-          "id": "84deaa58-2c75-42c3-9061-3bf4ec80d29e",
-          "comment": "",
-          "command": "click",
-          "target": "css=.tile-green",
+          "command": "waitForElementVisible",
+          "target": "css=.tile-green-sea",
+          "value": "10000",
+          "id": "06e66150-fd15-48a6-a8db-373ad6ad7c0a",
           "targets": [
             [
-              "css=.tile-green",
+              "css=.tile-green-sea",
               "css:finder"
-            ],
-            [
-              "xpath=//path-framework[@id='app']/path-application/div/div/div/div/div/span[2]/span/span/path-button-group/span/div/span/span/path-button/a/div",
-              "xpath:idRelative"
-            ],
-            [
-              "xpath=//path-button/a/div",
-              "xpath:position"
             ]
-          ],
-          "value": ""
+          ]
         },
         {
-          "id": "68ecab4c-80bf-4260-8087-850974d7d67e",
-          "comment": "",
+          "command": "click",
+          "target": "css=.tile-green-sea",
+          "value": "",
+          "id": "ed7102df-6cfb-43aa-95bc-521c08332539",
+          "targets": [
+            [
+              "css=.tile-green-sea",
+              "css:finder"
+            ]
+          ]
+        },
+        {
+          "command": "waitForElementVisible",
+          "target": "css=.ng-invalid",
+          "value": "10000",
+          "id": "wait-first-input"
+        },
+        {
           "command": "click",
           "target": "css=.ng-invalid",
+          "value": "",
+          "id": "c7d2610b-13b8-4dec-962e-aeddcdcb82c6",
           "targets": [
             [
               "css=.ng-invalid",
@@ -107,21 +77,16 @@
               "xpath:attributes"
             ],
             [
-              "xpath=//div[@id='myModal']/div/path-form/div/form/div[2]/div/span/span/path-textfield/span/div/input",
+              "xpath=(//div[@id='myModal']/div/path-form/div/form/div[2]/div/span/span/path-textfield/span/div/input)[1]",
               "xpath:idRelative"
-            ],
-            [
-              "xpath=//span/div/input",
-              "xpath:position"
             ]
-          ],
-          "value": ""
+          ]
         },
         {
-          "id": "cd433242-1f2b-446c-a3c3-b4b67ed1d3b4",
-          "comment": "",
           "command": "type",
-          "target": "xpath=(//input[@type='text'])[3]",
+          "target": "css=.ng-invalid",
+          "value": "xx",
+          "id": "47064dab-d863-4c57-be59-356ebecf9718",
           "targets": [
             [
               "css=.ng-dirty",
@@ -132,46 +97,106 @@
               "xpath:attributes"
             ],
             [
-              "xpath=//div[@id='myModal']/div/path-form/div/form/div[2]/div/span/span/path-textfield/span/div/input",
+              "xpath=(//div[@id='myModal']/div/path-form/div/form/div[2]/div/span/span/path-textfield/span/div/input)[1]",
               "xpath:idRelative"
-            ],
-            [
-              "xpath=//span/div/input",
-              "xpath:position"
             ]
-          ],
-          "value": "A unique 71382 String!"
+          ]
         },
         {
-          "id": "9fae656b-2a71-4fa9-a8b6-cb2a096fdec6",
-          "comment": "",
+          "command": "waitForElementVisible",
+          "target": "css=.col-sm-10 > .ng-untouched",
+          "value": "10000",
+          "id": "wait-second-input"
+        },
+        {
           "command": "click",
-          "target": "css=.btn:nth-child(3) > .path-default-font",
+          "target": "css=.col-sm-10 > .ng-untouched",
+          "value": "",
+          "id": "0a5d5e0e-f794-4851-95cf-de719da3158a",
           "targets": [
             [
-              "css=.btn:nth-child(3) > .path-default-font",
+              "css=.col-sm-10 > .ng-untouched",
               "css:finder"
             ],
             [
-              "xpath=//div[@id='myModal']/div/path-form/div/form/div[3]/button[3]/span",
+              "xpath=(//input[@type='text'])[4]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=(//div[@id='myModal']/div/path-form/div/form/div[2]/div[2]/span/span/path-textfield/span/div/input)[1]",
+              "xpath:idRelative"
+            ]
+          ]
+        },
+        {
+          "command": "type",
+          "target": "css=.col-sm-10 > .ng-untouched",
+          "value": "xx",
+          "id": "a4ebbc05-02a4-4686-9c93-fa47628d8858",
+          "targets": [
+            [
+              "css=.col-sm-10 > .ng-untouched",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@type='text'])[4]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=(//div[@id='myModal']/div/path-form/div/form/div[2]/div[2]/span/span/path-textfield/span/div/input)[1]",
+              "xpath:idRelative"
+            ]
+          ]
+        },
+        {
+          "command": "waitForElementVisible",
+          "target": "css=.btn:nth-child(3)",
+          "value": "10000",
+          "id": "wait-ok-button"
+        },
+        {
+          "command": "click",
+          "target": "css=.btn:nth-child(3)",
+          "value": "",
+          "id": "b036e289-b0b2-40a3-b41c-429fe0a52189",
+          "targets": [
+            [
+              "css=.btn:nth-child(3)",
+              "css:finder"
+            ],
+            [
+              "xpath=(//div[@id='myModal']/div/path-form/div/form/div[3]/button[3])[1]",
               "xpath:idRelative"
             ],
             [
-              "xpath=//button[3]/span",
-              "xpath:position"
-            ],
-            [
-              "xpath=//span[contains(.,'Ok')]",
+              "xpath=//button[contains(.,'OK')]",
               "xpath:innerText"
             ]
-          ],
-          "value": ""
+          ]
         },
         {
-          "id": "c3bff848-3d49-4930-9f28-453659f464ad",
-          "comment": "",
+          "command": "waitForElementNotPresent",
+          "target": "css=.modal-backdrop",
+          "value": "10000",
+          "id": "wait-modal-close-after-create"
+        },
+        {
+          "command": "pause",
+          "target": "",
+          "value": "1000",
+          "id": "pause-after-create"
+        },
+        {
+          "command": "waitForElementVisible",
+          "target": "css=.form-control:nth-child(1)",
+          "value": "10000",
+          "id": "wait-search-after-create"
+        },
+        {
           "command": "click",
           "target": "css=.form-control:nth-child(1)",
+          "value": "",
+          "id": "957025c7-72a6-4bb5-9832-d577fce5774b",
           "targets": [
             [
               "css=.form-control:nth-child(1)",
@@ -182,21 +207,16 @@
               "xpath:attributes"
             ],
             [
-              "xpath=//path-framework[@id='app']/path-application/div/div/div/div/div/span[3]/span/span/path-list/span/span/div/div/form/input",
+              "xpath=(//path-framework[@id='app']/path-application/div/div/div/div/div/span[3]/span/span/path-list/span/span/div/div/form/input)[1]",
               "xpath:idRelative"
-            ],
-            [
-              "xpath=//form/input",
-              "xpath:position"
             ]
-          ],
-          "value": ""
+          ]
         },
         {
-          "id": "df1b56ac-134d-4ba5-ac81-be36e4d0741b",
-          "comment": "",
           "command": "type",
           "target": "css=.form-control:nth-child(1)",
+          "value": "xx",
+          "id": "2083f00a-7cf7-4696-8dec-08fc094de4c3",
           "targets": [
             [
               "css=.form-control:nth-child(1)",
@@ -207,154 +227,176 @@
               "xpath:attributes"
             ],
             [
-              "xpath=//path-framework[@id='app']/path-application/div/div/div/div/div/span[3]/span/span/path-list/span/span/div/div/form/input",
+              "xpath=(//path-framework[@id='app']/path-application/div/div/div/div/div/span[3]/span/span/path-list/span/span/div/div/form/input)[1]",
               "xpath:idRelative"
-            ],
-            [
-              "xpath=//form/input",
-              "xpath:position"
             ]
-          ],
-          "value": "A unique 71382 String!"
+          ]
         },
         {
-          "id": "1",
-          "comment": "",
-          "command": "waitForElementVisible",
-          "target": "css=.tile-wet-asphalt",
-          "targets": [],
-          "value": "10000"
-        },
-        {
-          "id": "31c1d4cb-9ab2-4b35-86dd-ce8dca00ab43",
-          "comment": "",
-          "command": "click",
-          "target": "css=.tile-wet-asphalt",
+          "command": "sendKeys",
+          "target": "css=.form-control:nth-child(1)",
+          "value": "${KEY_ENTER}",
+          "id": "ebd73657-4e22-4d36-b65a-3705e609abce",
           "targets": [
             [
-              "css=.tile-wet-asphalt",
+              "css=.form-control:nth-child(1)",
               "css:finder"
             ],
             [
-              "xpath=//path-framework[@id='app']/path-application/div/div/div/div/div/span[3]/span/span/path-list/span/span[7]/path-button-group/span/div/span/span/path-button/a/div",
-              "xpath:idRelative"
+              "xpath=(//input[@name='search'])[2]",
+              "xpath:attributes"
             ],
             [
-              "xpath=//span[7]/path-button-group/span/div/span/span/path-button/a/div",
-              "xpath:position"
+              "xpath=(//path-framework[@id='app']/path-application/div/div/div/div/div/span[3]/span/span/path-list/span/span/div/div/form/input)[1]",
+              "xpath:idRelative"
             ]
-          ],
-          "value": ""
+          ]
         },
         {
-          "id": "501c37d1-7ff7-49bd-a749-f0e9697fdfac",
-          "comment": "",
+          "command": "waitForElementVisible",
+          "target": "css=.tile-wet-asphalt > .h4",
+          "value": "10000",
+          "id": "wait-result-tile"
+        },
+        {
+          "command": "click",
+          "target": "css=.tile-wet-asphalt > .h4",
+          "value": "",
+          "id": "296283a1-f47f-44f9-bac3-95ddcae3f303",
+          "targets": [
+            [
+              "css=.tile-wet-asphalt > .h4",
+              "css:finder"
+            ],
+            [
+              "xpath=(//path-framework[@id='app']/path-application/div/div/div/div/div/span[3]/span/span/path-list/span/span[4]/path-button-group/span/div/span/span/path-button/a/div/div)[1]",
+              "xpath:idRelative"
+            ]
+          ]
+        },
+        {
+          "command": "waitForElementVisible",
+          "target": "css=.mr-auto > .path-default-font",
+          "value": "10000",
+          "id": "wait-delete-button"
+        },
+        {
           "command": "click",
           "target": "css=.mr-auto > .path-default-font",
+          "value": "",
+          "id": "ad419e72-497e-41ec-bc34-a79ad049e307",
           "targets": [
             [
               "css=.mr-auto > .path-default-font",
               "css:finder"
             ],
             [
-              "xpath=//div[@id='myModal']/div/path-form/div/form/div[3]/button/span",
+              "xpath=(//div[@id='myModal']/div/path-form/div/form/div[3]/button/span)[1]",
               "xpath:idRelative"
             ],
             [
-              "xpath=//div[3]/button/span",
-              "xpath:position"
-            ],
-            [
-              "xpath=//span[contains(.,'Delete')]",
+              "xpath=//span[contains(.,'Löschen')]",
               "xpath:innerText"
             ]
-          ],
-          "value": ""
+          ]
         },
         {
-          "id": "c5e99754-9cb3-4251-9393-cd9eb05940bc",
-          "comment": "",
+          "command": "waitForElementVisible",
+          "target": "css=.modal-footer:nth-child(2) > .btn:nth-child(2) > .path-default-font",
+          "value": "10000",
+          "id": "wait-confirm-delete"
+        },
+        {
           "command": "click",
           "target": "css=.modal-footer:nth-child(2) > .btn:nth-child(2) > .path-default-font",
+          "value": "",
+          "id": "821c85d4-36b8-4997-9a64-cae412ffc4c3",
           "targets": [
             [
               "css=.modal-footer:nth-child(2) > .btn:nth-child(2) > .path-default-font",
               "css:finder"
             ],
             [
-              "xpath=//div[@id='myModal']/div/path-form/div/form/div[2]/button[2]/span",
+              "xpath=(//div[@id='myModal']/div/path-form/div/form/div[2]/button[2]/span)[1]",
               "xpath:idRelative"
-            ],
-            [
-              "xpath=//div[2]/button[2]/span",
-              "xpath:position"
             ]
-          ],
-          "value": ""
+          ]
         },
         {
-          "id": "0f90b434-e103-45a7-9514-c1376d0355f2",
-          "comment": "",
+          "command": "waitForElementNotPresent",
+          "target": "css=.modal-backdrop",
+          "value": "10000",
+          "id": "wait-modal-close-after-delete"
+        },
+        {
+          "command": "pause",
+          "target": "",
+          "value": "1500",
+          "id": "pause-after-delete"
+        },
+        {
+          "command": "waitForElementVisible",
+          "target": "css=.breadcrumb-item > a",
+          "value": "10000",
+          "id": "wait-breadcrumb"
+        },
+        {
           "command": "click",
           "target": "css=.breadcrumb-item > a",
+          "value": "",
+          "id": "8233e35f-2f42-484c-87df-d0bc05a34ef1",
           "targets": [
-            [
-              "linkText=Hauptmenü",
-              "linkText"
-            ],
             [
               "css=.breadcrumb-item > a",
               "css:finder"
             ],
             [
-              "xpath=//a[contains(text(),'Hauptmenü')]",
+              "xpath=(//a[contains(text(),'Hauptmenü')])[1]",
               "xpath:link"
             ],
             [
-              "xpath=//path-framework[@id='app']/path-application/div/div/path-breadcrumb/div/h4/ol/li/a",
+              "xpath=(//path-framework[@id='app']/path-application/div/div/path-breadcrumb/div/h4/ol/li/a)[1]",
               "xpath:idRelative"
-            ],
-            [
-              "xpath=(//a[contains(@href, '#')])[4]",
-              "xpath:href"
-            ],
-            [
-              "xpath=//ol/li/a",
-              "xpath:position"
             ],
             [
               "xpath=//a[contains(.,'Hauptmenü')]",
               "xpath:innerText"
             ]
-          ],
-          "value": ""
+          ]
         },
         {
-          "id": "7fa6724b-9ad2-4600-a4ac-43d4fe580bc6",
-          "comment": "",
+          "command": "waitForElementVisible",
+          "target": "css=.tile-turquoise",
+          "value": "10000",
+          "id": "wait-main-tile-2"
+        },
+        {
           "command": "click",
-          "target": "css=.h4",
+          "target": "css=.tile-turquoise",
+          "value": "",
+          "id": "60865960-d972-4c51-bd14-bd48b5dc29e0",
           "targets": [
             [
-              "css=.h4",
+              "css=.tile-turquoise",
               "css:finder"
             ],
             [
-              "xpath=//path-framework[@id='app']/path-application/div/div/div/div[2]/div/span/span/span/path-button-group/span/div/span/span/path-button/a/div/div",
+              "xpath=(//path-framework[@id='app']/path-application/div/div/div/div[3]/div/span/span/span/path-button-group/span/div/span/span/path-button/a/div)[1]",
               "xpath:idRelative"
-            ],
-            [
-              "xpath=//a/div/div",
-              "xpath:position"
             ]
-          ],
-          "value": ""
+          ]
         },
         {
-          "id": "ff4684a3-3d88-483d-a313-1aa3d87803ba",
-          "comment": "",
+          "command": "waitForElementVisible",
+          "target": "css=.form-control:nth-child(1)",
+          "value": "10000",
+          "id": "wait-search-after-return"
+        },
+        {
           "command": "click",
-          "target": "xpath=(//input[@name='search'])[2]",
+          "target": "css=.form-control:nth-child(1)",
+          "value": "",
+          "id": "d2de2ff0-aca8-4c6d-99e4-5c5548768b5f",
           "targets": [
             [
               "css=.form-control:nth-child(1)",
@@ -365,21 +407,16 @@
               "xpath:attributes"
             ],
             [
-              "xpath=//path-framework[@id='app']/path-application/div/div/div/div/div/span[3]/span/span/path-list/span/span/div/div/form/input",
+              "xpath=(//path-framework[@id='app']/path-application/div/div/div/div/div/span[3]/span/span/path-list/span/span/div/div/form/input)[1]",
               "xpath:idRelative"
-            ],
-            [
-              "xpath=//form/input",
-              "xpath:position"
             ]
-          ],
-          "value": ""
+          ]
         },
         {
-          "id": "f0f60137-f2f5-4534-9dd9-74f6e6e5028d",
-          "comment": "",
           "command": "type",
           "target": "css=.form-control:nth-child(1)",
+          "value": "xx",
+          "id": "b158e35f-8e10-4a5a-8517-5fc7b48ca8b3",
           "targets": [
             [
               "css=.form-control:nth-child(1)",
@@ -390,44 +427,42 @@
               "xpath:attributes"
             ],
             [
-              "xpath=//path-framework[@id='app']/path-application/div/div/div/div/div/span[3]/span/span/path-list/span/span/div/div/form/input",
+              "xpath=(//path-framework[@id='app']/path-application/div/div/div/div/div/span[3]/span/span/path-list/span/span/div/div/form/input)[1]",
               "xpath:idRelative"
-            ],
-            [
-              "xpath=//form/input",
-              "xpath:position"
             ]
-          ],
-          "value": "A unique 71382 String!"
+          ]
         },
         {
-          "id": "72531458-bb0e-44b3-9e26-f9355ddda1c6",
-          "comment": "",
-          "command": "waitForElementNotPresent",
-          "target": "xpath=//span[2]/path-button-group/span/div/span/span/path-button/a/div",
-          "targets": [],
-          "value": "10000"
-        },
-        {
-          "id": "da2129c5-9f69-485c-b9dd-914619022cb3",
-          "comment": "",
-          "command": "assertElementNotPresent",
-          "target": "xpath=//span[2]/path-button-group/span/div/span/span/path-button/a/div",
+          "command": "sendKeys",
+          "target": "css=.form-control:nth-child(1)",
+          "value": "${KEY_ENTER}",
+          "id": "3250b9f5-2775-4019-8dfd-ebb119bed888",
           "targets": [
             [
-              "css=span:nth-child(2) > path-button-group .card-body",
+              "css=.form-control:nth-child(1)",
               "css:finder"
             ],
             [
-              "xpath=//path-framework[@id='app']/path-application/div/div/div/div/div/span[3]/span/span/path-list/span/span[2]/path-button-group/span/div/span/span/path-button/a/div",
-              "xpath:idRelative"
+              "xpath=(//input[@name='search'])[2]",
+              "xpath:attributes"
             ],
             [
-              "xpath=//span[2]/path-button-group/span/div/span/span/path-button/a/div",
-              "xpath:position"
+              "xpath=(//path-framework[@id='app']/path-application/div/div/div/div/div/span[3]/span/span/path-list/span/span/div/div/form/input)[1]",
+              "xpath:idRelative"
             ]
-          ],
-          "value": ""
+          ]
+        },
+        {
+          "command": "waitForElementNotPresent",
+          "target": "xpath=//span[2]/path-button-group/span/div/span/span/path-button/a/div",
+          "value": "10000",
+          "id": "wait-item-not-present"
+        },
+        {
+          "command": "assertElementNotPresent",
+          "target": "xpath=//span[2]/path-button-group/span/div/span/span/path-button/a/div",
+          "value": "",
+          "id": "acdc89f2-e302-45b6-a1f5-12ba749fda81"
         }
       ]
     }
@@ -440,7 +475,7 @@
       "parallel": false,
       "timeout": 300,
       "tests": [
-        "8ee98c89-830f-4bba-9f7d-ecdf703b8ce5"
+        "b31ad8c0-30b7-4365-8b16-81b19a4ae32b"
       ]
     }
   ],
