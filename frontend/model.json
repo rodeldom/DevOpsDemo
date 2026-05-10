@@ -191,7 +191,7 @@
                     {
                         "type": "button",
                         "name": {
-                            "default": "👥 User-List"
+                            "default": "👥 USER-List"
                         },
                         "icon": "fa-users",
                         "color": "turquoise",
