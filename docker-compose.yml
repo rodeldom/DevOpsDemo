@@ -1,6 +1,6 @@
 services:
   devopsdemo:
-    image: mosazhaw/devopsdemo
+    image: rodeldom/devopsdemo
     container_name: devopsdemo
     ports:
       - "8088:8080"
